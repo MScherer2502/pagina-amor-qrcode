@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eu Te Amo</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #fff0f5;
+      color: #333;
+      text-align: center;
+      padding: 40px;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    #counter {
+      font-size: 1.8em;
+      margin-top: 20px;
+      color: #c71585;
+    }
+    iframe {
+      margin-top: 30px;
+      width: 90%;
+      max-width: 560px;
+      height: 315px;
+      border: none;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>eu te amo mais que tudo</h1>
+  <div id="counter"></div>
+  <iframe src="https://www.youtube.com/embed/jp288zfsNTI" allowfullscreen></iframe>
+
+  <script>
+    const targetDate = new Date("2021-10-31");
+    const today = new Date();
+    const diffTime = Math.abs(today - targetDate);
+    const diffDays = Math.floor(diffTime / (1000 * 60 * 60 * 24));
+    const pastOrFuture = today > targetDate ? 'desde' : 'até';
+
+    document.getElementById("counter").textContent = `Se passaram ${diffDays} dias ${pastOrFuture} 31/10/2021.`;
+  </script>
+</body>
+</html>
